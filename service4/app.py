@@ -7,7 +7,7 @@ from os import getenv
 app = Flask(__name__)
 
 @app.route('/', methods=['GET','POST'])
-def core_service():
+def service4():
      
   rand_str = requests.get('http://40.69.63.132:5002/')
   rand_int = requests.get('http://40.69.63.132:5001/')  

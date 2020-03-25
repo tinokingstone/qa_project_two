@@ -9,11 +9,9 @@ app = Flask(__name__)
 @app.route('/', methods=['GET','POST'])
 def core_service():
      
-  rand_str = requests.get('http://40.69.63.132:5002/')
-  rand_int = requests.get('http://40.69.63.132:5001/')  
-  str_int = str(rand_str.text) + str(rand_int.text) 
+  final_result = requests.get('http://40.69.63.132:5007/')
 
-  return str(str_int) #,  {"rand_int":rand_int} ,"asdasdasdasdad"
+  return str(final_result) #,  {"rand_int":rand_int} ,"asdasdasdasdad"
 if __name__=='__main__':
-  app.run(host='0.0.0.0', port=5003, debug=True)
+  app.run(host='0.0.0.0', port=5007, debug=True)
 
