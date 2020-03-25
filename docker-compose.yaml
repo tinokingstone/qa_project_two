@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  flask-app:
+    build: ./rand_int
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
