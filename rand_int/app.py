@@ -12,7 +12,7 @@ def rand_int():
       rand_int += str(random.randint(0, 9))
   
   #return str(random.randint(0, 9))
-  return rand_int, {"rand_int":rand_int} #"asdasdasdasdad"
+  return rand_int #, {"rand_int":rand_int} ,"asdasdasdasdad"
 if __name__=='__main__':
   app.run(host='0.0.0.0', port=5001, debug=True)
 
