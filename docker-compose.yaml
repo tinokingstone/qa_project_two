@@ -12,4 +12,11 @@ services:
     - target: 5002
       published: 5002
       protocol: tcp
+  core_service:
+    build: ./core_service
+    ports:
+    - target: 5003
+      published: 5003
+      protocol: tcp
+
 

@@ -5,7 +5,7 @@ import random
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET' , 'POST'])
 def rand_int():
   rand_int = ""
   for i in range(4):
