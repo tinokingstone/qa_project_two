@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET' , 'POST'])
 def rand_int():
   rand_int = ""
-  for i in range(4):
+  for i in range(16):
       rand_int += str(random.randint(0, 9))
   
   #return str(random.randint(0, 9))

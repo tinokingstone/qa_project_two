@@ -21,8 +21,8 @@ services:
   core_service:
     build: ./core_service
     ports:
-    - target: 5004
-      published: 5004
+    - target: 5007
+      published: 5007
       protocol: tcp
 
 
