@@ -8,10 +8,11 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET','POST'])
 def core_service():
-     
-  final_result = requests.get('http://40.69.63.132:5007/')
 
-  return str(final_result) #,  {"rand_int":rand_int} ,"asdasdasdasdad"
+  rand_str = requests.get('http://40.69.63.132:5003/')
+  final_res = str(rand_str.text)
+
+  return "the final random number and string put together are " + str(final_res) #,  {"rand_int":rand_int} ,"asdasdasdasdad"
 if __name__=='__main__':
-  app.run(host='0.0.0.0', port=5007, debug=True)
+  app.run(host='0.0.0.0', port=5000, debug=True)
 

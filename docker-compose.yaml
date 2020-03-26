@@ -1,28 +1,36 @@
 version: '3.7'
 services:
   rand_int:
-    build: ./rand_int
+    image: tinokingstone/rand_int:v2          
+          #build: ./rand_int
     ports:
     - target: 5001
       published: 5001
       protocol: tcp
+    deploy:
+      replicas: 4
   rand_str:
-    build: ./rand_str
+    image: tinokingstone/rand_str:v1          
+          #build: ./rand_str
     ports:
     - target: 5002
       published: 5002
       protocol: tcp
+    deploy:
+      replicas: 4
   service4:
-    build: ./service4
+    image: tinokingstone/service4:v1  
+          #build: ./service4
     ports:
     - target: 5003
       published: 5003
       protocol: tcp
   core_service:
-    build: ./core_service
+    image: tinokingstone/core_service:v1          
+          #    build: ./core_service
     ports:
-    - target: 5007
-      published: 5007
+    - target: 5000
+      published: 5000
       protocol: tcp
 
 

@@ -13,7 +13,7 @@ def rand_str():
 
   rand_str = ""
   letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-  for i in range(16):
+  for i in range(8):
       rand_str += str(random.choice(letters))    
 
 
