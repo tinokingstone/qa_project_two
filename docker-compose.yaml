@@ -8,16 +8,16 @@ services:
       published: 5001
       protocol: tcp
     deploy:
-      replicas: 4
+      replicas: 3
   rand_str:
-    image: tinokingstone/rand_str:v1          
+    image: tinokingstone/rand_str:v2          
           #build: ./rand_str
     ports:
     - target: 5002
       published: 5002
       protocol: tcp
     deploy:
-      replicas: 4
+      replicas: 3
   service4:
     image: tinokingstone/service4:v1  
           #build: ./service4
@@ -25,12 +25,45 @@ services:
     - target: 5003
       published: 5003
       protocol: tcp
+    deploy:
+      replicas: 3
   core_service:
     image: tinokingstone/core_service:v1          
           #    build: ./core_service
+    networks:
+      - mvp
     ports:
-    - target: 5000
-      published: 5000
-      protocol: tcp
+      - target: 5000
+        published: 5000
+        protocol: tcp
+    deploy:
+      replicas: 3
+    depends_on:
+      - mvp_db
+    environment:
+      - DATABASE_URI=mysql+pymysql://root:${PWD_ROOT}@mvp_db:3306/rand_gen
+      - SECRET_KEY=${MY_SECRET_KEY}  
+  mvp_db:
+    image: tinokingstone/mvp_db:v2
+    #build: ./database/
+    container_name: mvp_db
+    networks:
+      - mvp
+    ports:
+      - target: 3306
+        published: 3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=${PWD_ROOT}
+      - MYSQL_ALLOW_EMPTY_PASSWORD=no  
+    volumes:
+      - type: volume
+        source: flasksql
+        target: /var/lib/mysql
+  redis:
+    image: redis:alpine
+networks:
+  mvp:
+volumes:
+  flasksql:
 
 
