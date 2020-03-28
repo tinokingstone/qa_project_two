@@ -1,0 +1,8 @@
+[load_balancer]
+40.115.122.152
+
+[load_balancer:vars]
+ansible_user=tinokingstone
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+
