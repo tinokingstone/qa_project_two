@@ -11,7 +11,7 @@
     state: started
 - name: 'install nginx.conf'
   template:
-    src: nnginx/nginx.conf
+    src: nginx.conf
     dest: /etc/nginx/nginx.conf
   register: nginx_config
 - name: 'restart nginx'
