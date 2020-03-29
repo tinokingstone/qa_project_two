@@ -5,7 +5,7 @@ pipeline{
                 steps{
                     sh "pwd"
                     sh "ls -a"
-                    sh "ssh tinokingstone@51.141.35.78"
+                    sh "ssh tinokingstone@51.141.35.78 -y"
                     sh "touch hello.txt"
 
                 }
