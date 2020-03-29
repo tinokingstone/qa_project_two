@@ -18,16 +18,7 @@
   - name: docker
     pip:
       name: docker
-  - name: json
-    pip:
-      name: jsondiff
-  - name: requests
-    pip:
-      name: requests
-  - name: yaml
-    pip:
-      name: pyyaml
-  - name: compose
+  - name: docker-compose
     pip:
       name: docker-compose
   - name: docker gpg key
@@ -46,29 +37,19 @@
       - containerd.io
       state: latest
       update_cache: true
-  - name: docker service
+  - name: start docker
     service:
       name: docker
       state: started
+
   - name: insecure registry create Dir
     file:
       path: /etc/docker/
       state: directory
       mode: "0700"
-
-  - name: Pull default Docker image
-    docker_image:
-      name: jenkins
-      source: pull
-  - openssh_keypair:
-      path: /home/jenkins/.ssh/id_rsa
-     
-
-  - name: launch jenkins container
-    docker_container:
-      name: jenkins
-      image: tinokingstone/mvp_jenkind:v1
-      ports:
-       - "8080:8080"
-       - "127.0.0.1:8080:8080/udp"    
-      #command: docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+  - name: adding existing user "{{ ansible_user }}" to group sudo
+    user:
+      name: tinokingstone
+      groups: docker
+      append: yes
+    become: yes
