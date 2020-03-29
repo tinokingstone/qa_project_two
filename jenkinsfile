@@ -6,6 +6,11 @@ pipeline{
                     sh "pwd"
                     sh "ls -a"
                     sh "whoami"
+                    ssh tinokingstone@51.141.35.78 << EOF
+                        echo 1
+                        echo 2
+                        echo 3
+                        EOF
                     sh "ssh -t -t tinokingstone@51.141.35.78"
                     sh "touch hello.txt"
                 }
