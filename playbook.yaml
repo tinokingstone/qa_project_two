@@ -1,8 +1,13 @@
-- hosts: all
+- hosts: Load_Balancer
   become: yes
   roles:
-  - common
-  - role: Load_Balancer
-    vars:
-      install_directory: /opt/static-website-example
-      git_repository: https://gitlab.com/qacdevops/static-website-example
+  - Load_Balancer
+  #- role: Load_Balancer
+    #vars:
+      #install_directory: /opt/static-website-example
+      #git_repository: https://gitlab.com/qacdevops/static-website-example
+- hosts: Ci_Server
+  become: yes
+  roles:
+  - Ci_Server
+
