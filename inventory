@@ -13,5 +13,5 @@ ansible_ssh_private_key_file=~/.ssh/id_rsa
 ansible_user=tinokingstone
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 ansible_ssh_private_key_file=~/.ssh/id_rsa
-ansible_sudo_pass=Thenightisdark11!
+ansible_sudo_pass=
 
