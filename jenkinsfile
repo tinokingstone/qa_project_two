@@ -5,6 +5,7 @@ pipeline{
                 steps{
                     sh "pwd"
                     sh "ls -a"
+                    sh "docker ps -a"
 
                 
                     sh "docker stack deploy --compose-file docker-compose.yaml stackdemo"
