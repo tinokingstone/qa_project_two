@@ -3,6 +3,10 @@ pipeline{
         stages{
             stage('Run App'){
                 steps{
+                    sh "pwd"
+                    sh "ls -a"
+
+                
                     sh "docker stack deploy --compose-file docker-compose.yaml stackdemo"
                 }
             }
