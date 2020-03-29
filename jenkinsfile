@@ -12,7 +12,6 @@ pipeline{
                         echo 3
                         EOF
                     sh "ssh -t -t tinokingstone@51.141.35.78"
-                    sh "touch hello.txt"
                 }
             }
         }    
