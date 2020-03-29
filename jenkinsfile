@@ -5,7 +5,6 @@ pipeline{
                 steps{
                     sh "pwd"
                     sh "ls -a"
-                    sh "docker ps -a"
                     sh "ssh tinokingstone@51.141.35.78"
                     sh "touch hello.txt"
 
