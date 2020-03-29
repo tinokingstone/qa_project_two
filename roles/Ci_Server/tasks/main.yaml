@@ -64,7 +64,7 @@
   - name: launch jenkins container
     docker_container:
       name: jenkins
-      image: jenkins
+      image: jenkins/jenkins
       ports:
        - "8080:8080"
        - "127.0.0.1:8080:8080/udp"    
