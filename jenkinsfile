@@ -3,10 +3,9 @@ pipeline{
         stages{
             stage('Run App'){
                 steps{
+                    sh "cd /"
                     sh "pwd"
-                    sh "ls -a"
-                    sh "whoami"
-                    sh "ssh -t -t tinokingstone@51.140.240.158"
+                    sh "ls"
                         
                }
             }
