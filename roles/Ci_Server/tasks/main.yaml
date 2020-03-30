@@ -60,9 +60,13 @@
     docker_image:
       name: jenkins
       source: pull
+
   - openssh_keypair:
       path: /home/jenkins/.ssh/id_rsa
-     
+      owner: jenkins
+      group: jenkins
+      mode: u=rw,g=,o=     
+      #mode: "7777"
 
   - name: launch jenkins container
     docker_container:
@@ -70,5 +74,24 @@
       image: tinokingstone/mvp_jenkind:v1
       ports:
        - "8080:8080"
-       - "127.0.0.1:8080:8080/udp"    
-      #command: docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+       - "127.0.0.1:8080:8080/udp" 
+         #detach: no
+      volumes:
+        - jenkins:/data
+          #become: yes   
+
+  - name: Copy public key 
+    copy: src=/home/jenkins/.ssh/id_rsa.pub dest=/tmp/id_rsa.pub remote_src=yes directory_mode=yes
+
+  - name: copy private key
+    copy: src=/home/jenkins/.ssh/id_rsa dest=/tmp/id_rsa remote_src=yes directory_mode=yes
+
+  - name: Copy in the template
+    command: docker cp /tmp/id_rsa.pub jenkins:/var/jenkins_home/id_rsa.pub
+    become: yes
+
+  - name: Copy in the template
+    command: docker cp /tmp/id_rsa jenkins:/var/jenkins_home/id_rsa
+    become: yes
+
+    #/home/jenkins/.shh/id_rsa.pub
