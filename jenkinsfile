@@ -7,7 +7,12 @@ pipeline{
                      ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
                     ls
                     pwd
-                    touch jenkinswashere.txt
+                    mkdir mvp
+                    cd mvp
+                    git init
+                    git clone https://github.com/tinokingstone/qa_project_two.git
+                    ls
+                    
                     EOF
                     """
                        
