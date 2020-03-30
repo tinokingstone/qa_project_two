@@ -12,11 +12,9 @@ pipeline{
                     git init
                     git clone https://github.com/tinokingstone/qa_project_two.git
                     ls
-                    
-                    EOF
+                    cd qa_project_two
+                    docker compose up -d --build
                     """
-                       
-                        
                }
             }
         }    
