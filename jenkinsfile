@@ -3,12 +3,11 @@ pipeline{
         stages{
             stage('Run App'){
                 steps{
-                    sh "cd /"
-                    sh "pwd"
-                    sh "ls"
-                    sh "cd .."
-                    sh "ls"
-                    sh "ssh -i ~/id_rsa tinokingstone@51.140.240.158 'pwd'"
+                
+                pwd
+                ls
+                        
+                       
                         
                }
             }
