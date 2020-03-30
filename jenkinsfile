@@ -8,7 +8,7 @@ pipeline{
                     sh "ls"
                     sh "cd .."
                     sh "ls"
-                    sh "ssh -i ~/home/id_rsa tinokingstone@51.140.240.158"
+                    sh "ssh -i ~/id_rsa tinokingstone@51.140.240.158"
                         
                }
             }
