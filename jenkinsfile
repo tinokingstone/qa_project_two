@@ -3,10 +3,12 @@ pipeline{
         stages{
             stage('Run App'){
                 steps{
-                
-                pwd
-                ls
-                        
+                      sh """
+                    ssh /id_rsa tinokingstone@51.140.240.158 <<EOF
+                    cd somewhere
+                    do some more stuff
+                    EOF
+                    """
                        
                         
                }
