@@ -18,6 +18,7 @@ ansible_sudo_pass=password
 [Docker]
 51.140.240.158
 51.141.47.94
+51.141.55.41
 
 [Docker]
 ansible_user=tinokingstone
