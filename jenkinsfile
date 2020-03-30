@@ -4,7 +4,7 @@ pipeline{
             stage('Run App'){
                 steps{
                       sh """
-                    ssh /id_rsa tinokingstone@51.140.240.158 <<EOF
+                    ssh tinokingstone@51.140.240.158 <<EOF
                     cd somewhere
                     do some more stuff
                     EOF
