@@ -7,13 +7,14 @@ pipeline{
                      ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
                     ls
                     pwd
+                    rm -rf mvp
                     mkdir mvp
                     cd mvp
                     git init
                     git clone https://github.com/tinokingstone/qa_project_two.git
                     ls
                     cd qa_project_two
-                    docker compose up -d --build
+                    docker stack deploy --compose-file docker-compose.yaml stackdemo
                     """
                }
             }
