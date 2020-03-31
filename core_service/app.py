@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET','POST'])
 def core_service():
 
-  rand_str = requests.get('http://localhost:5003/')
+  rand_str = requests.get('http://51.140.240.158:5003/')
   final_res = str(rand_str.text)
 
   return "the final random number and string put together are " + str(final_res) #,  {"rand_int":rand_int} ,"asdasdasdasdad"
