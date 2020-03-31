@@ -9,8 +9,8 @@ app = Flask(__name__)
 @app.route('/', methods=['GET','POST'])
 def service4():
      
-  rand_str = requests.get('http://localhost:5002/')
-  rand_int = requests.get('http://localhost:5001/')  
+  rand_str = requests.get('http://51.140.240.158:5002/')
+  rand_int = requests.get('http://51.140.240.158:5001/')  
   str_int = str(rand_str.text) + str(rand_int.text) 
 
   return str(str_int) #,  {"rand_int":rand_int} ,"asdasdasdasdad"
