@@ -1,7 +1,7 @@
 pipeline{
         agent any
         stages{
-            stage('Run App'){
+            stage('launch mvp'){
                 steps{
                       sh """
                      ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
