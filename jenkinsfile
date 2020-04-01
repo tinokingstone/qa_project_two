@@ -5,7 +5,7 @@ pipeline{
                 steps{
                       sh """
                      ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
-                    ls
+                   
                     pwd
                     rm -rf mvp
                     mkdir mvp
