@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   rand_int:
-    image: tinokingstone/rand_int:v1          
+    image: tinokingstone/rand_int:v2          
           #build: ./rand_int
     ports:
     - target: 5001
@@ -10,7 +10,7 @@ services:
     deploy:
       replicas: 3
   rand_str:
-    image: tinokingstone/rand_str:v1          
+    image: tinokingstone/rand_str:v2          
           #build: ./rand_str
     ports:
     - target: 5002
