@@ -1,0 +1,4 @@
+rand_int/venv
+rand_int/__pycache__/
+**/__pycache__
+**/*.pyc
