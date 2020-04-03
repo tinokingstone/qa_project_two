@@ -1,22 +1,35 @@
 pipeline{
         agent any
         stages{
-            stage('launch mvp'){
+            stage('test mvp services'){
                 steps{
                       sh """
                      ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
-                   
-                    
                     rm -rf mvp
                     mkdir mvp
                     cd mvp
                     git init
                     git clone https://github.com/tinokingstone/qa_project_two.git
                     cd qa_project_two
+                    cd rand_int
+                    pytest -v --cov=app --cov-report=html
+                    cd ..
+                    cd rand_str
+                    pytest -v --cov=app --cov-report=html                    
+                    """
+                  }
+                }
+             stage('launch mvp'){
+                steps{
+                      sh """
+                     ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
+                    cd mvp
+                    cd qa_project_two
                     docker stack deploy --compose-file docker-compose.yaml stackdemo
                     """
-               }
-            }
+                  }
+                }
+       
         }    
 }
 
