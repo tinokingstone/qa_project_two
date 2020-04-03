@@ -16,29 +16,7 @@ My applications architecture had to be micro-service orientated with at least 4 
 For my application I wanted to make a mission generator for a survival themed video game where the character, map location (objective start and end), character stats and weapon would be randomised before a player enters a mission.
 
 #### Application Architecture 
-The image below is a visual representation of the micro service archetecure i designed for my web app.
-Inline-style: 
+The image below is a visual representation of the micro service architecture i designed for my web app.
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/application-architecture.jpg "Logo Title Text 1")
 
-
-
-
-
-
-Random character 
-Random location on map google maps (point a point b) 
-Random mission objective
-Random weapon 
-Random stats 
-
-
-
-
-
-
-
-
-
-
-
-
+my app creates a mission and weapon objects from the information it gets from my random location and character services and then displays them on my front end service where a user can choose to save the random combinations into a database (play)
