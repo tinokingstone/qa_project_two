@@ -38,6 +38,8 @@ The image below is a visual representation of the micro service architecture i d
 #### MVP sprints
 below is a an imaage showing some of the sprints i done while working on this project, i made a new branch everythime i wanted to make a new feature. i treated avery new feature as an agile sprint
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/sprints.jpg "Logo Title Text 1")
+
+## MVP Service 1 and 2 
 ##### MVP Service 1 and 2 
 random string and in genarator + testing results
 ##### MVP Service 3
