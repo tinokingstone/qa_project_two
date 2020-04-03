@@ -36,3 +36,17 @@ when making this board i decided that i should start my project by creating and 
 The image below is a visual representation of the micro service architecture i designed for my MVP, i reduced the complexity and number of my services so that i could spend more time developing my pipeline.
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/mvp-architecture.jpg "Logo Title Text 1")
 #### MVP sprints
+The image below shows some of the sprints i done while wonking on my mvp, 
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/mvp-architecture.jpg "Logo Title Text 1")
+
+##### Service 1 and 2 
+random string and in genarator + testing results
+##### Service 3
+random prize gen + testing results
+##### Service 4
+front end + db + testing results
+
+
+
+
+
