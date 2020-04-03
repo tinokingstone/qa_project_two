@@ -19,3 +19,5 @@ For my application I wanted to make a mission generator for a survival themed vi
 The image below is a visual representation of the micro service architecture i designed for my web app.
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/application-architecture.jpg "Logo Title Text 1")
 my app creates a mission and weapon objects from the information it gets from my random location and character services and then displays them on my front end service where a user can choose to save the random combinations into a database (play)
+## Project Planning and Managment
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/kanban1.jpg "Logo Title Text 1")
