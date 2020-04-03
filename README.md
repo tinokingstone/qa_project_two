@@ -6,12 +6,12 @@ The project brief had 2 main predefined rules that my final application had to m
 
 ### application functions
 we had to limit the scope of our application to a random object genarator for example:
-1. First ordered list item
-2. Another item
-⋅⋅* Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
+* A prize generator.
+* D&D style character generator.
+* Theme and setting generator for short stories
+
+### application Architecture 
+My applications architecture had to be micro-service orientated and with at least 4 services working together.
 
 
 
