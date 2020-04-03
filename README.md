@@ -17,8 +17,8 @@ For my application I wanted to make a mission generator for a survival themed vi
 
 #### Application Architecture 
 The image below is a visual representation of the micro service archetecure i designed for my web app.
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text][logo]
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 
 
