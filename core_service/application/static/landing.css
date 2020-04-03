@@ -1,0 +1,26 @@
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        height: 100vh;
+        width: 350px;
+
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+        background-color: #2D2D2D;
+	border-radius: 5px;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+	color: white;
+        padding-left: 10px;
+      }

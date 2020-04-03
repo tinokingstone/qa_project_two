@@ -1,43 +1,53 @@
 version: '3.7'
 services:
-  rand_int:
-    image: tinokingstone/rand_int:v2          
-          #build: ./rand_int
+  survive_character:
+          #image: tinokingstone/rand_char:v1          
+    build: ./rand_char
     ports:
     - target: 5001
       published: 5001
       protocol: tcp
-    deploy:
-      replicas: 3
-  rand_str:
-    image: tinokingstone/rand_str:v2          
-          #build: ./rand_str
+      #deploy:
+            #replicas: 3
+  survive_start:
+          #image: tinokingstone/survive_start:v1              
+    build: ./start_point
     ports:
     - target: 5002
       published: 5002
       protocol: tcp
-    deploy:
-      replicas: 3
-  service4:
-    image: tinokingstone/service4:v1  
-          #build: ./service4
+      #deploy:
+            #replicas: 1
+  survive_end:
+          #image: tinokingstone/survive_end:v1  
+    build: ./end_point
     ports:
     - target: 5003
       published: 5003
       protocol: tcp
-    deploy:
-      replicas: 3
-  core_service:
-    image: tinokingstone/core_service:v1          
-          #    build: ./core_service
+      #deploy:
+            #replicas: 1
+  survive_stats:
+          #image: tinokingstone/survive_stats:v1
+    build: ./service4
+    ports:
+    - target: 5004
+      published: 5004
+      protocol: tcp
+      #deploy:
+            #replicas: 1
+
+  survive_core:
+          #image: tinokingstone/survive_core:v1          
+    build: ./core_service
     networks:
       - mvp
     ports:
       - target: 5000
         published: 5000
         protocol: tcp
-    deploy:
-      replicas: 3
+        #deploy:
+            #replicas: 3
     depends_on:
       - mvp_db
     environment:
