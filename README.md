@@ -13,8 +13,13 @@ i had to limit the scope of my application to a random object generator for exam
 ### Application Architecture 
 My applications architecture had to be micro-service orientated with at least 4 services working together.
 
-## My Application Idea 
+## My Application Idea
+ 
+### Survival Game Mission Generator
+
 For my application I wanted to make a mission generator for a survival themed video game where the character, map location (objective start and end), character stats and weapon would be randomised before a player enters a mission.
+
+#### Application Architecture 
 
 Random character 
 Random location on map google maps (point a point b) 
@@ -22,7 +27,6 @@ Random mission objective
 Random weapon 
 Random stats 
 
-Survival Game 
 
 
 
