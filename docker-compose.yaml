@@ -29,13 +29,26 @@ services:
             #replicas: 1
   survive_stats:
           #image: tinokingstone/survive_stats:v1
-    build: ./service4
+    build: ./rand_stats
     ports:
-    - target: 5004
-      published: 5004
+    - target: 5005
+      published: 5005
       protocol: tcp
       #deploy:
             #replicas: 1
+
+  survive_weapon:
+          #image: tinokingstone/survive_stats:v1
+    build: ./rand_weapon
+    ports:
+    - target: 5006
+      published: 5006
+      protocol: tcp
+      #deploy:
+            #replicas: 1
+
+    
+
 
   survive_core:
           #image: tinokingstone/survive_core:v1          
