@@ -1,69 +1,64 @@
 version: '3.7'
 services:
-  rand_int:
-    image: tinokingstone/rand_int:v1          
-          #build: ./rand_int
+  survive_character:
+    image: tinokingstone/survive_character:v2          
+    #build: ./rand_char
     ports:
     - target: 5001
       published: 5001
       protocol: tcp
-    deploy:
-      replicas: 3
-  rand_str:
-    image: tinokingstone/rand_str:v1          
-          #build: ./rand_str
+      #deploy:
+              #replicas: 3
+  survive_start:
+    image: tinokingstone/survive_start:v2              
+    build: ./start_point
     ports:
     - target: 5002
       published: 5002
       protocol: tcp
-    deploy:
-      replicas: 3
-  service4:
-    image: tinokingstone/service4:v1  
-          #build: ./service4
+      #deploy:
+            #replicas: 3
+  survive_end:
+    image: tinokingstone/survive_end:v2  
+    #build: ./end_point
     ports:
     - target: 5003
       published: 5003
       protocol: tcp
-    deploy:
-      replicas: 3
-  core_service:
-    image: tinokingstone/core_service:v1          
-          #    build: ./core_service
-    networks:
-      - mvp
+      #deploy:
+            #replicas: 3
+  survive_stats:
+    image: tinokingstone/survive_stats:v2
+    #build: ./rand_stats
+    ports:
+    - target: 5005
+      published: 5005
+      protocol: tcp
+      #deploy:
+            #replicas: 1
+
+  survive_weapon:
+    image: tinokingstone/survive_weapon:v2
+    #build: ./rand_weapon
+    ports:
+    - target: 5006
+      published: 5006
+      protocol: tcp
+      #deploy:
+            #replicas: 1
+            
+  survive_core:
+    image: tinokingstone/survive_core:v2          
+    #build: ./core_service
+   
     ports:
       - target: 5000
         published: 5000
         protocol: tcp
-    deploy:
-      replicas: 3
-    depends_on:
-      - mvp_db
+        #deploy:
+            #replicas: 3
     environment:
-      - DATABASE_URI=mysql+pymysql://root:${PWD_ROOT}@mvp_db:3306/rand_gen
+      - DATABASE_URI=mysql+pymysql://root:${PWD_ROOT}@51.141.2.46:3306/rand_gen
+        #- DATABASE_URI=mysql+pymysql://root:${PWD_ROOT}@survive_db:3306/rand_gen
       - SECRET_KEY=${MY_SECRET_KEY}  
-  mvp_db:
-    image: tinokingstone/mvp_db:v2
-    #build: ./database/
-    container_name: mvp_db
-    networks:
-      - mvp
-    ports:
-      - target: 3306
-        published: 3306
-    environment:
-      - MYSQL_ROOT_PASSWORD=${PWD_ROOT}
-      - MYSQL_ALLOW_EMPTY_PASSWORD=no  
-    volumes:
-      - type: volume
-        source: flasksql
-        target: /var/lib/mysql
-  redis:
-    image: redis:alpine
-networks:
-  mvp:
-volumes:
-  flasksql:
-
 
