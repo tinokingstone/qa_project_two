@@ -4,7 +4,7 @@ pipeline{
             stage('test mvp services'){
                 steps{
                       sh """
-                     ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
+                     ssh -i ~/id_rsa tinokingstone@51.141.55.41 <<EOF
                     rm -rf mvp
                     mkdir mvp
                     cd mvp
@@ -26,7 +26,7 @@ pipeline{
              stage('launch mvp'){
                 steps{
                       sh """                  
-                    ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
+                    ssh -i ~/id_rsa tinokingstone@51.141.55.41 <<EOF
                     cd mvp
                     cd qa_project_two
                     docker stack deploy --compose-file docker-compose.yaml stackdemo
