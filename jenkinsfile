@@ -5,18 +5,17 @@ pipeline{
                 steps{
                       sh """
                      ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
-                    ls
-                    pwd
+                    
+                    export MY_SECRET_KEY=root
+                    export PWD_ROOT=password              
                     rm -rf mvp
                     mkdir mvp                    
-                    export MY_SECRET_KEY=root
-                    export PWD_ROOT=password
+
                     cd mvp
                     git init
                     git clone https://github.com/tinokingstone/qa_project_two.git
                     cd qa_project_two
                     git checkout game_app
-
                     docker stack deploy --compose-file docker-compose.yaml survive
                     """
                }
