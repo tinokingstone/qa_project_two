@@ -46,10 +46,7 @@ services:
       protocol: tcp
       #deploy:
             #replicas: 1
-
-    
-
-
+            
   survive_core:
     image: tinokingstone/survive_core:v1          
     #build: ./core_service
