@@ -28,6 +28,11 @@ pipeline{
                       sh """
                     export MY_SECRET_KEY=root
                     export PWD_ROOT=password
+                    export SECRET_KEY=root
+                    echo $SECRET_KEY
+                    echo $MY_SECRET_KEY
+                    echo $PWD_ROOT
+                    
                     ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
                     cd mvp
                     cd qa_project_two
