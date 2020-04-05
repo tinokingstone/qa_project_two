@@ -14,7 +14,6 @@ pipeline{
                     python3 -m venv venv
                     source venv/bin/activate
                     pip3 install -r requirements.txt
-                    
                     cd rand_int
                     pytest -v --cov=app --cov-report=html
                     cd ..
@@ -27,9 +26,11 @@ pipeline{
                 steps{
                       sh """                  
                     ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
+                    export MY_SECRET_KEY=root
+                    export PWD_ROOT=password
                     cd mvp
                     cd qa_project_two
-                    docker stack deploy --compose-file docker-compose.yaml stackdemo
+                    docker stack deploy --compose-file docker-compose.yaml survive
                     """
                   }
                 }
