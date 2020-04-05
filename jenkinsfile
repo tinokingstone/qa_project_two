@@ -8,14 +8,15 @@ pipeline{
                     ls
                     pwd
                     rm -rf mvp
-                    mkdir mvp
+                    mkdir mvp                    
+                    export MY_SECRET_KEY=root
+                    export PWD_ROOT=password
                     cd mvp
                     git init
                     git clone https://github.com/tinokingstone/qa_project_two.git
                     cd qa_project_two
                     git checkout game_app
-                    export MY_SECRET_KEY=root
-                    export PWD_ROOT=password
+
                     docker stack deploy --compose-file docker-compose.yaml survive
                     """
                }
