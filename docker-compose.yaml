@@ -17,7 +17,7 @@ services:
       published: 5002
       protocol: tcp
       #deploy:
-            #replicas: 1
+            #replicas: 3
   survive_end:
     image: tinokingstone/survive_end:v2  
     build: ./end_point
