@@ -26,7 +26,9 @@ pipeline{
              stage('launch mvp'){
                 steps{
                       sh """
-                     ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
+                    export MY_SECRET_KEY=root
+                    export PWD_ROOT=password
+                    ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
                     cd mvp
                     cd qa_project_two
                     docker stack deploy --compose-file docker-compose.yaml stackdemo
