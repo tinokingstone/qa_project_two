@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # QA Practical SFIA Project 2
 ## Project Brief
 
