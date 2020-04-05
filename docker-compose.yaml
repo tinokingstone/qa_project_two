@@ -1,45 +1,17 @@
 version: '3.7'
 services:
-<<<<<<< HEAD
-<<<<<<< HEAD
-  rand_int:
-    image: tinokingstone/rand_int:v1          
-          #build: ./rand_int
-=======
   survive_character:
     image: tinokingstone/survive_character:v2          
     #build: ./rand_char
->>>>>>> game_app
-=======
-  survive_character:
-    image: tinokingstone/survive_character:v2
-    #build: ./rand_char
->>>>>>> d503694bc9364b7138d4cca828ca4e5c56f50f80
     ports:
     - target: 5001
       published: 5001
       protocol: tcp
-<<<<<<< HEAD
-<<<<<<< HEAD
-    deploy:
-      replicas: 3
-  rand_str:
-    image: tinokingstone/rand_str:v1          
-          #build: ./rand_str
-=======
       #deploy:
               #replicas: 3
   survive_start:
     image: tinokingstone/survive_start:v2              
     build: ./start_point
->>>>>>> game_app
-=======
-      #deploy:
-              #replicas: 3
-  survive_start:
-    image: tinokingstone/survive_start:v2
-    #build: ./start_point
->>>>>>> d503694bc9364b7138d4cca828ca4e5c56f50f80
     ports:
     - target: 5002
       published: 5002
@@ -47,11 +19,7 @@ services:
       #deploy:
             #replicas: 3
   survive_end:
-<<<<<<< HEAD
     image: tinokingstone/survive_end:v2  
-=======
-    image: tinokingstone/survive_end:v2
->>>>>>> d503694bc9364b7138d4cca828ca4e5c56f50f80
     #build: ./end_point
     ports:
     - target: 5003
@@ -78,19 +46,11 @@ services:
       protocol: tcp
       #deploy:
             #replicas: 1
-<<<<<<< HEAD
             
   survive_core:
     image: tinokingstone/survive_core:v2          
     #build: ./core_service
    
-=======
-
-  survive_core:
-    image: tinokingstone/survive_core:v2
-    #build: ./core_service
-
->>>>>>> d503694bc9364b7138d4cca828ca4e5c56f50f80
     ports:
       - target: 5000
         published: 5000
@@ -100,10 +60,5 @@ services:
     environment:
       - DATABASE_URI=mysql+pymysql://root:${PWD_ROOT}@51.141.2.46:3306/rand_gen
         #- DATABASE_URI=mysql+pymysql://root:${PWD_ROOT}@survive_db:3306/rand_gen
-<<<<<<< HEAD
       - SECRET_KEY=${MY_SECRET_KEY}  
-=======
-      - SECRET_KEY=${MY_SECRET_KEY}
-
->>>>>>> d503694bc9364b7138d4cca828ca4e5c56f50f80
 
