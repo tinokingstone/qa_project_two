@@ -4,7 +4,7 @@ pipeline{
             stage('Run App'){
                 steps{
                       sh """
-                     ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
+                     ssh -i ~/id_rsa tinokingstone@51.141.2.46 <<EOF
                     
                     export MY_SECRET_KEY=root
                     export PWD_ROOT=password              
