@@ -31,12 +31,20 @@ def landing():
   img = str(js["img"])
 
 
+  url2 = 'http://40.69.63.132:5005/'
 
+  r = requests.get(url2)
+  js = r.json()
+  agility = str(js["Agility"])
+  charisma = str(js["Charisma"])
+  endurance = str(js["Endurance"])
+  intelligence = str(js["Intelligence"])
+  strength = str(js["Strength"])
 
 
   start_point = str(start_point.text)
   end_point = str(end_point.text)
-  
+
   survive_character = str(survive_character.text)
 
 
@@ -47,10 +55,9 @@ def landing():
   all_saves = rand_obj.query.all()
 
   if form.validate_on_submit():
-      rand_obj_insert = rand_obj(rand_item=rand_obj_fin)
+      rand_obj_insert = rand_obj(first=first, last=first, age=age ,gender=gender , img=img ,agility=agility,charisma=charisma,endurance=endurance,intelligence=intelligence,strength=strength,weapon=survive_weapon,end_point=end_point,start_point=start_point,rand_item="0")
       db.session.add(rand_obj_insert)
       db.session.commit()
       flash('item added to the database')
       return redirect(url_for('landing'))
-  return render_template('landing.html', title='landing', form=form , end_point=end_point, start_point=start_point, survive_character=survive_character, survive_weapon=survive_weapon,  all_saves=all_saves, env_ip=url , first=first, last=last, gender=gender, age=age, img=img )
-
+  return render_template('landing.html', title='landing', form=form , end_point=end_point, start_point=start_point, survive_character=survive_character, survive_weapon=survive_weapon,  all_saves=all_saves, env_ip=url , first=first, last=last, gender=gender, age=age, img=img ,agility=agility,charisma=charisma,endurance=endurance,intelligence=intelligence,strength=strength )
