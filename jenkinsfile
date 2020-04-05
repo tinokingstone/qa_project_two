@@ -12,6 +12,8 @@ pipeline{
                     cd mvp
                     git init
                     git clone https://github.com/tinokingstone/qa_project_two.git
+                    cd qa_project_two
+                    docker stack deploy --compose-file docker-compose.yaml stackdemo
                     """
                }
             }
