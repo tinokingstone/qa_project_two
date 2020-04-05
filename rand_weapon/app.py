@@ -9,8 +9,8 @@ app = Flask(__name__)
 @app.route('/', methods=['GET' , 'POST'])
 def rand_weapon():
 
-  url = 'http://40.69.63.132:5001/'
-  url2 = 'http://40.69.63.132:5005/'
+  url = 'http://51.140.240.158:5001/'
+  url2 = 'http://51.140.240.158:5005/'
 
   r = requests.get(url)
   js = r.json()

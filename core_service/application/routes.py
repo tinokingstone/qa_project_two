@@ -16,12 +16,12 @@ def landing():
   #url = "http://"+str(env_ip)+":5002/"
 
 
-  start_point = requests.get('http://40.69.63.132:5002/')
-  end_point = requests.get('http://40.69.63.132:5003/')
-  survive_weapon = requests.get('http://40.69.63.132:5006/')
-  survive_character = requests.get('http://40.69.63.132:5001/')
+  start_point = requests.get('http://51.140.240.158:5002/')
+  end_point = requests.get('http://51.140.240.158:5003/')
+  survive_weapon = requests.get('http://51.140.240.158:5006/')
+  survive_character = requests.get('http://51.140.240.158:5001/')
 
-  url = "http://40.69.63.132:5001/"
+  url = "http://51.140.240.158:5001/"
   r = requests.get(url)
   js = r.json()
   first = str(js["first"])
@@ -31,7 +31,7 @@ def landing():
   img = str(js["img"])
 
 
-  url2 = 'http://40.69.63.132:5005/'
+  url2 = 'http://51.140.240.158:5005/'
 
   r = requests.get(url2)
   js = r.json()
