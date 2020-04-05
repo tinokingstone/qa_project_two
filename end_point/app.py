@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET' , 'POST'])
 def end_point():
   
-  url = 'https://randomuser.me/api/?nat=gb'
+  url = 'https://randomuser.me/api/?nat=us'
   r = requests.get(url)
   js = r.json()
   end_point = str(js["results"][0]["location"]["city"])

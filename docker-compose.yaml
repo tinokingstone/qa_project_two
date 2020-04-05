@@ -1,8 +1,8 @@
 version: '3.7'
 services:
   survive_character:
-    image: tinokingstone/survive_character:v1          
-    #build: ./rand_char
+          #image: tinokingstone/survive_character:v1          
+    build: ./rand_char
     ports:
     - target: 5001
       published: 5001
@@ -10,8 +10,8 @@ services:
       #deploy:
               #replicas: 3
   survive_start:
-    image: tinokingstone/survive_start:v1              
-    #build: ./start_point
+          #image: tinokingstone/survive_start:v1              
+    build: ./start_point
     ports:
     - target: 5002
       published: 5002
@@ -19,8 +19,8 @@ services:
       #deploy:
             #replicas: 1
   survive_end:
-    image: tinokingstone/survive_end:v1  
-    #build: ./end_point
+          #image: tinokingstone/survive_end:v1  
+    build: ./end_point
     ports:
     - target: 5003
       published: 5003
@@ -28,8 +28,8 @@ services:
       #deploy:
             #replicas: 1
   survive_stats:
-    image: tinokingstone/survive_stats:v1
-    #build: ./rand_stats
+          #image: tinokingstone/survive_stats:v1
+    build: ./rand_stats
     ports:
     - target: 5005
       published: 5005
@@ -38,8 +38,8 @@ services:
             #replicas: 1
 
   survive_weapon:
-    image: tinokingstone/survive_weapon:v1
-    #build: ./rand_weapon
+          #image: tinokingstone/survive_weapon:v1
+    build: ./rand_weapon
     ports:
     - target: 5006
       published: 5006

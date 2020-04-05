@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET' , 'POST'])
 def rand_int():
 
-  url = 'https://randomuser.me/api/?gender=female'
+  url = 'https://randomuser.me/api/?gender=male'
   r = requests.get(url)
   js = r.json()
   gender = str(js["results"][0]["gender"])

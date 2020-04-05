@@ -51,28 +51,28 @@ def rand_weapon():
   weapons = [["rubber duck", "fork" , "butter knife" ,"baseball bat", "cross bow" ] ,[ "axe" , "samuri sword", "pistol" , "automatic rifle" , "sniper rifle" ] , ["grenade launcher"] ,["tank"]]
   tiers = ["0", "1", "2", "3"]
 
-  if fin_val <= 6:
+  if fin_val <= 23:
       tier = 0
       tier_option = weapons[tier]
       rand_wep = random.randrange((len(tier_option)) - 1)
       weapon_option = tier_option[rand_wep]
       return(weapon_option)
 
-  elif fin_val <= 12:
+  elif fin_val <= 25:
       tier = 1
       tier_option = weapons[tier]
       rand_wep = random.randrange((len(tier_option)) - 1)
       weapon_option = tier_option[rand_wep]
       return(weapon_option)
 
-  elif fin_val <= 22:
+  elif fin_val <= 27:
       tier = 2
       tier_option = weapons[tier]
       rand_wep = random.randrange((len(tier_option)))
       weapon_option = tier_option[rand_wep]
       return(weapon_option)
 
-  elif fin_val >= 23:
+  elif fin_val >= 29:
       tier = 3
       tier_option = weapons[tier]
       rand_wep = random.randrange((len(tier_option)))

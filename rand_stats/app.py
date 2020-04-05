@@ -8,11 +8,11 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET' , 'POST'])
 def rand_stats():
-    Strength=str(random.randint(10, 100))
-    Endurance=str(random.randint(10, 100))
-    Agility=str(random.randint(10, 100))
-    Intelligence=str(random.randint(10, 100))
-    Charisma=str(random.randint(10, 100))
+    Strength=str(random.randint(10, 50))
+    Endurance=str(random.randint(10, 50))
+    Agility=str(random.randint(10, 50))
+    Intelligence=str(random.randint(10, 50))
+    Charisma=str(random.randint(10, 50))
 
     return jsonify ({'Strength' : Strength , 'Endurance' : Endurance , 'Agility' : Agility , 'Intelligence' : Intelligence , 'Charisma' : Charisma})
 
