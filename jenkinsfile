@@ -1,16 +1,19 @@
 pipeline{
         agent any
         stages{
-            stage('launch mvp'){
+            stage('test mvp services'){
                 steps{
                       sh """
                      ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
+<<<<<<< HEAD
 <<<<<<< HEAD
                    
                     
 =======
                            
 >>>>>>> game_app
+=======
+>>>>>>> d503694bc9364b7138d4cca828ca4e5c56f50f80
                     rm -rf mvp
                     mkdir mvp                    
 
@@ -18,12 +21,36 @@ pipeline{
                     git init
                     git clone https://github.com/tinokingstone/qa_project_two.git
                     cd qa_project_two
+<<<<<<< HEAD
                     git checkout game_app
                     docker stack deploy --compose-file docker-compose.yaml survive
                     
+=======
+                    
+                    python3 -m venv venv
+                    source venv/bin/activate
+                    pip3 install -r requirements.txt
+                    
+                    cd rand_int
+                    pytest -v --cov=app --cov-report=html
+                    cd ..
+                    cd rand_str
+                    pytest -v --cov=app --cov-report=html                    
                     """
-               }
-            }
+                  }
+                }
+             stage('launch mvp'){
+                steps{
+                      sh """
+                     ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
+                    cd mvp
+                    cd qa_project_two
+                    docker stack deploy --compose-file docker-compose.yaml stackdemo
+>>>>>>> d503694bc9364b7138d4cca828ca4e5c56f50f80
+                    """
+                  }
+                }
+       
         }    
 }
 

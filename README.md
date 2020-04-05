@@ -45,7 +45,8 @@ below is a an imaage showing some of the sprints i done while working on this pr
 ##### MVP Service 1 and 2 
 random string and in genarator + testing results
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/rand_int_test_cov.jpg "Logo Title Text 1")
-
+random string and in genarator + testing results
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/rand_str_test_cov.jpg "Logo Title Text 1")
 ##### MVP Service 3
 random prize gen + testing results
 ##### MVP Service 4
