@@ -12,10 +12,6 @@ pipeline{
                     cd mvp
                     git init
                     git clone https://github.com/tinokingstone/qa_project_two.git
-                    cd qa_project_two
-                    export MY_SECRET_KEY=root
-                    export PWD_ROOT=root
-                    docker stack deploy --compose-file docker-compose.yaml stackdemo
                     """
                }
             }
