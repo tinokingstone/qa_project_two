@@ -13,6 +13,7 @@ pipeline{
                     git init
                     git clone https://github.com/tinokingstone/qa_project_two.git
                     cd qa_project_two
+                    git checkout game_app
                     docker stack deploy --compose-file docker-compose.yaml stackdemo
                     """
                }
