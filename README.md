@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # QA Practical SFIA Project 2
 ## Project Brief
 
@@ -54,3 +55,8 @@ front end + db + testing results
 
 
 
+=======
+# qa_project_two
+123
+45
+>>>>>>> game_app

@@ -13,4 +13,8 @@
   roles:
   - Docker
 
+- hosts: Database
+  become: yes
+  roles:
+  - Database
 

@@ -5,15 +5,22 @@ pipeline{
                 steps{
                       sh """
                      ssh -i ~/id_rsa tinokingstone@51.140.240.158 <<EOF
+<<<<<<< HEAD
                    
                     
+=======
+                           
+>>>>>>> game_app
                     rm -rf mvp
-                    mkdir mvp
+                    mkdir mvp                    
+
                     cd mvp
                     git init
                     git clone https://github.com/tinokingstone/qa_project_two.git
                     cd qa_project_two
-                    docker stack deploy --compose-file docker-compose.yaml stackdemo
+                    git checkout game_app
+                    docker stack deploy --compose-file docker-compose.yaml survive
+                    
                     """
                }
             }
