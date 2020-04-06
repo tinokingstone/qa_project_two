@@ -89,7 +89,8 @@ all of the testing for service 3 and 4 was done using static analysis.
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/virtual-machines.jpg "Logo Title Text 1")"Logo Title Text 1")
 
 
-## Docker swarm
+## Docker Swarm and Fina C.I Pipeline
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/final-ci-pipeline.jpg "Logo Title Text 1")"Logo Title Text 1")
 
 
 ## Ansible
