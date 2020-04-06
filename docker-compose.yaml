@@ -8,7 +8,7 @@ services:
       published: 5001
       protocol: tcp
     deploy:
-      replicas: 4
+      replicas: 3
   survive_start:
     image: tinokingstone/survive_start:v1
     build: ./start_point
@@ -17,7 +17,7 @@ services:
       published: 5002
       protocol: tcp
     deploy:
-      replicas: 4
+      replicas: 3
   survive_end:
     image: tinokingstone/survive_end:v1
     #build: ./end_point
@@ -26,7 +26,7 @@ services:
       published: 5003
       protocol: tcp
     deploy:
-      replicas: 4
+      replicas: 3
   survive_stats:
     image: tinokingstone/survive_stats:v1
     #build: ./rand_stats
@@ -35,7 +35,7 @@ services:
       published: 5005
       protocol: tcp
     deploy:
-      replicas: 4
+      replicas: 3
 
   survive_weapon:
     image: tinokingstone/survive_weapon:v1
@@ -45,7 +45,7 @@ services:
       published: 5006
       protocol: tcp
     deploy:
-      replicas: 4
+      replicas: 3
             
   survive_core:
     image: tinokingstone/survive_core:v2
@@ -56,7 +56,7 @@ services:
         published: 5000
         protocol: tcp
     deploy:
-      replicas: 4
+      replicas: 3
     environment:
       - DATABASE_URI=mysql+pymysql://root:${PWD_ROOT}@51.141.2.46:3306/rand_gen
         #- DATABASE_URI=mysql+pymysql://root:${PWD_ROOT}@survive_db:3306/rand_gen
