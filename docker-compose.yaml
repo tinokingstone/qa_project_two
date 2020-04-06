@@ -50,7 +50,6 @@ services:
   survive_core:
     image: tinokingstone/survive_core:v2
     #build: ./core_service
-   
     ports:
       - target: 5000
         published: 5000
