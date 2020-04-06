@@ -99,7 +99,7 @@ i used ansible roles to configure all of my virtual machines
 
 
 ## jenkins
-![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/jenkins-two-stage-build.jpg)
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/jenkins3.jpg)
 for my environment variables i used a jenkins plugin called environment injector that allows me to set up the enviriment variable for a vm without having them in my jenkinsfile.
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/env-variables.jpg)
 
