@@ -44,6 +44,9 @@ the image below shows how i used the character name and stat values to determin 
 i made 4 tiers, 1 being the weakest weapon choices and 4 the highest. Depending on the tier a random choice is made to select and item from a list of choices.
 
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/weapongen.jpg "Logo Title Text 1")
+## Rick Assessment
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/risk-assessment.jpg "Logo Title Text 1")
+
 
 ## Project Planning and Managment
 
@@ -62,7 +65,7 @@ below is a an imaage showing some of the sprints i done while working on this pr
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/sprints.jpg "Logo Title Text 1")
 
 ## MVP Application
-
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/rand_int_test_cov.jpg "Logo Title Text 1")
 ##### MVP Service 1 and 2 
 below is an image of my tests results for my random string and intiger genarators, i wanted to get good results and testing coverage before moving on to my main application and pipeline. 
 The majority of tests during this project where done through static analysis and debugging, in the beggining the error messages i faced where a challange to understand but by the end of the project i was a lot more comfortable with handlng and solving them within a reasonable timeframe.
@@ -94,8 +97,9 @@ all of the testing for service 3 and 4 was done using static analysis.
 
 
 ## Finall app
+version 1
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/final-app.jpg)
-
+version 2
 
 
 
