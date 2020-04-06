@@ -79,8 +79,16 @@ all of the testing for service 3 and 4 was done using static analysis.
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/NGINX.jpg "Logo Title Text 1")"Logo Title Text 1")
 
 ## Docker compose
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/docker-compose.jpg "Logo Title Text 1")"Logo Title Text 1")
+
 ## Azure virtual machines
+
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/virtual-machines.jpg "Logo Title Text 1")"Logo Title Text 1")
+
+
 ## Docker swarm
+
+
 ## Ansible
 
 
