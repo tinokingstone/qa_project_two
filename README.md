@@ -24,7 +24,21 @@ For my application I wanted to make a mission generator for a survival themed vi
 
 #### Application Architecture 
 The image below is a visual representation of the micro service architecture i designed for my web app.
+
+Service 1 2 and 3 genarate random objects. my character and location genarators use a json web api to genarate details such as age, name, gender and city. my character stats are genarated using the random module from python.
+
+all of the 3 services have version one and 2.
+for my location genarator version one outputs citys from the U.K and version 2 genarates only american cities.
+
+my character genarator is defined by gender, one version creates only female characters and the other only males.
+
+the last object genarator creates random stats, one version is capped at a max skil level of 50 and the other goes all the way to 100.
+
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/application-architecture.jpg "Logo Title Text 1")
+
+in the diagram above the middle tiers use information from my random objects to create something new.
+
+my mision genarator uses
 my app creates a mission and weapon objects from the information it gets from my random location and character services and then displays them on my front end service where a user can choose to save the random combinations into a database (play)
 ## Project Planning and Managment
 
@@ -42,7 +56,7 @@ below is a an imaage showing some of the sprints i done while working on this pr
 ## MVP Application
 
 ##### MVP Service 1 and 2 
-random string and in genarator + testing results
+below is an image of my tests results for my random string and intiger genarators, i wanted to get good results and coverage before moving on to my main application and pipeline. 
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/rand_int_test_cov.jpg "Logo Title Text 1")
 random string and in genarator + testing results
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/rand_str_test_cov.jpg "Logo Title Text 1")
@@ -50,6 +64,13 @@ random string and in genarator + testing results
 random prize gen + testing results
 ##### MVP Service 4
 front end + db + testing results
+
+## Nginx
+## Docker compose
+## Azure virtual machines
+## Docker swarm
+## Ansible
+
 
 
 
