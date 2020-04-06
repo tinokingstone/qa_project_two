@@ -38,32 +38,41 @@ the last object genarator creates random stats, one version is capped at a max s
 
 in the diagram above the middle tiers use information from my random objects to create something new.
 
-my mision genarator uses
-my app creates a mission and weapon objects from the information it gets from my random location and character services and then displays them on my front end service where a user can choose to save the random combinations into a database (play)
+unfortunatly i did not manage to impliment a mission genarator into my final app due to time constraints, instead i focused on my weapon genarator which creates an object from my stats and charaters first and last name.
+
+the image below shows how i used the character name and stat values to determin the tier of weapon the player recieves.
+i made 4 tiers, 1 being the weakest weapon choices and 4 the highest. Depending on the tier a random choice is made to select and item from a list of choices.
+
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/weapongen.jpg "Logo Title Text 1")
+
 ## Project Planning and Managment
 
 #### MVP (minimal viable product)
-before starting my project i took into account what my minimal viable product would be for my application and ci pipeline.
+
+before starting my project i took into account what my minimal viable product would be for my application and Ci pipeline.
 i made a trello board (seen bellow) that highligted my tasks in terms of priority, the ones labled in green must be completed for my mvp.
+On top of this i used lists written on paper to keep track of smaller objectives.
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/kanban1.jpg "Logo Title Text 1")
 when making this board i decided that i should start my project by creating and completing my ci pipeline and then move on to dveloping my application.
-The image below is a visual representation of the micro service architecture i designed for my MVP, i reduced the complexity and number of my services so that i could spend more time developing my pipeline.
+
+The image below is a visual representation of the micro service architecture i designed for my MVP, i reduced the complexity and number of my services so that i could spend more time developing my pipeline
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/mvp-architecture.jpg "Logo Title Text 1")
 #### MVP sprints
-below is a an imaage showing some of the sprints i done while working on this project, i made a new branch everythime i wanted to make a new feature. i treated avery new feature as an agile sprint
+below is a an imaage showing some of the sprints i done while working on this project, i made a new branch everytime i wanted to make a new feature. i treated avery new feature as an agile sprint. 
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/sprints.jpg "Logo Title Text 1")
 
 ## MVP Application
 
 ##### MVP Service 1 and 2 
-below is an image of my tests results for my random string and intiger genarators, i wanted to get good results and coverage before moving on to my main application and pipeline. 
+below is an image of my tests results for my random string and intiger genarators, i wanted to get good results and testing coverage before moving on to my main application and pipeline. 
+The majority of tests during this project where done through static analysis and debugging, in the beggining the error messages i faced where a challange to understand but by the end of the project i was a lot more comfortable with handlng and solving them within a reasonable timeframe.
+
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/rand_int_test_cov.jpg "Logo Title Text 1")
-random string and in genarator + testing results
+random string and int genarator + testing results
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/rand_str_test_cov.jpg "Logo Title Text 1")
-##### MVP Service 3
-random prize gen + testing results
-##### MVP Service 4
-front end + db + testing results
+##### MVP Service 3 and 4
+all of the testing for service 3 and 4 was done using static analysis.
+
 
 ## Nginx
 ## Docker compose
