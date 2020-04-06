@@ -70,11 +70,14 @@ The majority of tests during this project where done through static analysis and
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/rand_int_test_cov.jpg "Logo Title Text 1")
 random string and int genarator + testing results
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/rand_str_test_cov.jpg "Logo Title Text 1")
+the code from the tests above was resued to make all  of my other services, knowing that i had tested the code gave me some peace of mind while developig the rest of the application.
+
 ##### MVP Service 3 and 4
 all of the testing for service 3 and 4 was done using static analysis.
 
-
 ## Nginx
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/NGINX.jpg "Logo Title Text 1")"Logo Title Text 1")
+
 ## Docker compose
 ## Azure virtual machines
 ## Docker swarm
