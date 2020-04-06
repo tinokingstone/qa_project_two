@@ -95,15 +95,21 @@ all of the testing for service 3 and 4 was done using static analysis.
 
 ## Ansible
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/roles.jpg   )
+i used ansible roles to configure all of my virtual machines 
 
+
+## jenkins
+![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/jenkins-two-stage-build.jpg)
+for my environment variables i used a jenkins plugin called environment injector that allows me to set up the enviriment variable for a vm without having them in my jenkinsfile.
 
 ## Finall app
 version 1
 ![alt text](https://github.com/tinokingstone/qa_project_two/blob/master/DOCUMENTATION%20IMAGES/final-app.jpg)
 version 2
 
+my final app uses the google maps api to set a start and end point for the player who is genarating a random mission and character.
+it takes the randomly genarated locations and plots them onto the real world map.
+when the player presses the play button all of the randomly genarated infomation in then saved in to my database that is running on its own vm.
 
+my final ci pipeline uses all of the technologies that i have learned so far and when i make a change on mu git hub the live application reflects the changes without any down time.
 
-
-123
-45
